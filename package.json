@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:namecheap": "vite build",
+    "package:namecheap": "npm run build:namecheap && cd dist && zip -r ../namecheap-deploy.zip ."
   },
   "dependencies": {
     "framer-motion": "^12.40.0",
