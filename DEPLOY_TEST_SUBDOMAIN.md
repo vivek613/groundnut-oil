@@ -31,17 +31,36 @@ Use a **separate** Netlify (or Vercel) site for the test subdomain so `main` and
 1. **Domain management** → **Add a domain** → `test.indicoglobal.com`
 2. Netlify shows DNS instructions (usually a **CNAME**)
 
-### Step 3 — Namecheap DNS
+### Step 3 — Namecheap DNS (fix “DNS verification failed”)
 
 **Domain List** → **Manage** → **Advanced DNS**
 
-| Type | Host | Value |
-|------|------|--------|
-| **CNAME** | `test` | `your-test-site-name.netlify.app` |
+Add **one** record (copy **Value** from Netlify → Domain management → `test.indicoglobal.com` → DNS configuration):
 
-(Use the exact hostname Netlify shows — not the `.netlify.app` URL with `https://`.)
+| Type | Host | Value | TTL |
+|------|------|--------|-----|
+| **CNAME Record** | `test` | `your-site-name.netlify.app` | Automatic |
 
-Remove conflicting `test` A/CNAME records. Wait 5–60 minutes. Netlify provisions **HTTPS** automatically.
+**Namecheap rules (important):**
+
+| Do | Don’t |
+|----|--------|
+| Host = `test` | Host = `test.indicoglobal.com` |
+| Value = `something.netlify.app` (no `https://`) | Value = your deploy preview URL with path |
+| Only **one** CNAME for `test` | A record + CNAME on `test` at the same time |
+| Remove old `test` A, URL Redirect, or CNAME rows | Leave parking / redirect records for `test` |
+
+**Check propagation** (after 5–30 min, up to 48h):
+
+```bash
+dig test.indicoglobal.com CNAME +short
+```
+
+Should return something like `your-site-name.netlify.app.`
+
+Then in Netlify → **Verify DNS** or wait — SSL provisions when DNS is correct globally.
+
+**If apex uses Netlify but subdomain doesn’t:** `indicoglobal.com` can point to Netlify (A `75.2.60.5`) while `test` still needs its **own** CNAME to your **test** Netlify site URL.
 
 **Live:** `https://test.indicoglobal.com`
 
