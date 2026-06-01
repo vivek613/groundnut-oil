@@ -124,6 +124,12 @@ Either works well for this project. Pick one.
 
 ---
 
+## Test subdomain (redesign branch)
+
+Deploy **`redesign/agro-export-hub-style`** to **`test.indicoglobal.com`** without affecting production — see **[DEPLOY_TEST_SUBDOMAIN.md](./DEPLOY_TEST_SUBDOMAIN.md)**.
+
+---
+
 ## After setup
 
 Share your domain name and which platform you chose if you want DNS records checked line-by-line.
