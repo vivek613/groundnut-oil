@@ -26,9 +26,55 @@ export const navLinks = [
       { label: 'Refined Oil', path: '/products/refined' },
     ],
   },
+  { label: 'About Us', path: '/about' },
   { label: 'Certification', path: '/quality' },
-  { label: 'About', path: '/about' },
-  { label: 'Contact', path: '/contact' },
+  { label: 'Quality', path: '/quality' },
+  { label: 'FAQs', path: '/faqs' },
+  { label: 'Contact Us', path: '/contact' },
+];
+
+export const standApart = [
+  {
+    title: 'Direct Sourcing',
+    text: 'We directly source high-quality groundnuts from Gujarat farms, ensuring fair pricing and consistent raw material supply.',
+  },
+  {
+    title: 'Sample Consistency',
+    text: 'Samples are taken from live production batches — bulk shipments match approved samples exactly.',
+  },
+  {
+    title: 'Quality Assurance',
+    text: 'FSSAI and APEDA certified with documented quality checks. Every batch meets export-grade standards.',
+  },
+  {
+    title: 'Logistics',
+    text: 'Export-grade packaging with secure handling and timely delivery to maintain product integrity in transit.',
+  },
+];
+
+export const qualityBullets = [
+  {
+    title: 'Purity Assured & Globally Compliant',
+    text: 'Every batch is processed under strict quality controls and tested to meet international safety standards.',
+  },
+  {
+    title: 'Consistent Quality, Every Shipment',
+    text: 'Controlled production ensures uniform color, aroma, and quality without variation batch to batch.',
+  },
+  {
+    title: 'Quality You Can Measure',
+    text: 'Precise parameters including optimal FFA levels, low moisture, and high purity for stability and shelf life.',
+  },
+  {
+    title: 'Fresh, Reliable, Ready to Reorder',
+    text: 'Efficient processing and dependable logistics make repeat orders simple, smooth, and predictable.',
+  },
+];
+
+export const trustBadges = [
+  'Global Safety Standards (HACCP / APEDA / FSSAI Certified)',
+  'Year-Round Availability (Ensuring consistent supply)',
+  'Transparent Pricing (Direct sourcing for fair pricing)',
 ];
 
 export const certifications = [

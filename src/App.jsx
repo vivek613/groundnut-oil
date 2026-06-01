@@ -8,6 +8,7 @@ import ProductDetail from './pages/ProductDetail';
 import Quality from './pages/Quality';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import FAQs from './pages/FAQs';
 import PageWrapper from './components/PageWrapper';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           />
           <Route path="/quality" element={<PageWrapper><Quality /></PageWrapper>} />
           <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
+          <Route path="/faqs" element={<PageWrapper><FAQs /></PageWrapper>} />
           <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
         </Routes>
       </AnimatePresence>

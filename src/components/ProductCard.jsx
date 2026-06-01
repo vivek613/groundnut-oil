@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { fadeUp, viewportOnce } from '../utils/motion';
 
 export default function ProductCard({ product, index = 0 }) {
@@ -26,8 +25,8 @@ export default function ProductCard({ product, index = 0 }) {
         <h3>{product.name}</h3>
         <p className="product-card__tagline">{product.tagline}</p>
         <p className="product-card__desc">{product.description.slice(0, 140)}…</p>
-        <Link to={`/products/${product.slug}`} className="btn btn--outline">
-          Know More <ArrowRight size={16} />
+    <Link to={`/products/${product.slug}`} className="btn btn--outline btn--know-more">
+          Know More
         </Link>
       </div>
     </motion.article>

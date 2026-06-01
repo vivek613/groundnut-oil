@@ -1,16 +1,15 @@
-import { Link } from 'react-router-dom';
-import { images } from '../data/images';
+import { site } from '../data/site';
 
-export default function QuoteForm({ compact = false }) {
+export default function QuoteForm() {
   return (
-    <div className={`quote-form-wrap${compact ? ' quote-form-wrap--compact' : ''}`}>
+    <div className="quote-form-wrap">
       <div className="quote-form-info">
         <h3>Ready to Define your Specs?</h3>
         <p className="quote-form-info__label">Speak to Our Export Desk</p>
         <ul className="quote-form-info__list">
-          <li><strong>Email:</strong> info@indicoglobal.com</li>
-          <li><strong>Location:</strong> Surat, Gujarat</li>
-          <li><strong>Phone:</strong> +91 6351011956</li>
+          <li>{site.email}</li>
+          <li>{site.address}</li>
+          <li>{site.phone}</li>
         </ul>
       </div>
       <form className="quote-form" onSubmit={(e) => e.preventDefault()}>

@@ -185,6 +185,21 @@ export const homeFeatures = [
   },
 ];
 
+export const homeFaqs = [
+  {
+    q: 'What is your minimum order quantity (MOQ)?',
+    a: 'Our standard MOQ depends on packaging and destination. Contact our export desk for a formal quotation tailored to your volume requirements.',
+  },
+  {
+    q: 'How do you ensure quality and safety during transit?',
+    a: 'We control moisture levels, use proper export packaging, and follow strict protocols to protect your shipment from damage, contamination, and transit-related issues.',
+  },
+  {
+    q: 'Do you support buyers after delivery?',
+    a: 'Yes. We stay engaged after shipment, welcome your feedback on arrival, address quality concerns professionally, and continuously improve based on your experience.',
+  },
+];
+
 export const faqs = [
   {
     q: 'What products does IndiCo Naturals offer?',
